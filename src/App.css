@@ -1,0 +1,386 @@
+/* تنسيقات عامة للاتجاه */
+:root {
+  --direction: rtl;
+  --text-align: right;
+  --margin-start: right;
+  --margin-end: left;
+}
+
+[dir="ltr"] {
+  --direction: ltr;
+  --text-align: left;
+  --margin-start: left;
+  --margin-end: right;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e3f2fd, #f3e5f5);
+  direction: var(--direction);
+  text-align: var(--text-align);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.filters-section {
+  flex: 0 0 300px;
+}
+
+.results-section {
+  flex: 1;
+}
+
+.price-graph-container,
+.flight-results-container {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+/* تعديلات للاتجاه */
+[dir="ltr"] .header-content,
+[dir="ltr"] .search-content,
+[dir="ltr"] .flight-main-info,
+[dir="ltr"] .details-grid {
+  text-align: left;
+}
+
+[dir="rtl"] .header-content,
+[dir="rtl"] .search-content,
+[dir="rtl"] .flight-main-info,
+[dir="rtl"] .details-grid {
+  text-align: right;
+}
+
+/* تعديلات الفلاتر للاتجاه */
+[dir="ltr"] .filter-option {
+  flex-direction: row;
+}
+
+[dir="rtl"] .filter-option {
+  flex-direction: row-reverse;
+}
+
+[dir="ltr"] .filter-checkbox {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+[dir="rtl"] .filter-checkbox {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .filters-section {
+    flex: none;
+    width: 100%;
+  }
+  
+  .price-graph-container h2,
+  .flight-results-container h2 {
+    font-size: 1.2rem;
+  }
+}
+.api-status {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.api-status.loading {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.api-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.api-status.error, .api-status.mock {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.api-source {
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
+  margin-right: 10px;
+}
+
+/* رسالة الترحيب */
+.welcome-message .features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.welcome-message .feature {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+.welcome-message .feature span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.welcome-message .feature p {
+  color: #666;
+  margin: 0;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .api-status {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  
+  .welcome-message .features {
+    gap: 15px;
+  }
+  
+  .welcome-message .feature {
+    min-width: 120px;
+    padding: 15px;
+  }
+}
+
+/* CSS العام للاتجاهين */
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* حالة LTR (الافتراضي) */
+.App.ltr {
+  text-align: left;
+  direction: ltr;
+}
+
+/* حالة RTL */
+.App.rtl {
+  text-align: right;
+  direction: rtl;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* تحسينات للاتجاه LTR */
+.App.ltr .main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.App.ltr .filters-section {
+  flex: 0 0 300px;
+}
+
+.App.ltr .results-section {
+  flex: 1;
+}
+
+/* تحسينات للاتجاه RTL */
+.App.rtl .main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-direction: row-reverse;
+}
+
+.App.rtl .filters-section {
+  flex: 0 0 300px;
+}
+
+.App.rtl .results-section {
+  flex: 1;
+}
+
+/* API status */
+.api-status {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.api-status.loading {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.api-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.api-status.error, .api-status.mock {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* رسالة الترحيب */
+.welcome-message {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message h2 {
+  color: #0071e3;
+  margin-bottom: 15px;
+}
+
+.welcome-message p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  flex: 0 1 200px;
+}
+
+.feature span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+/* حاوية النتائج */
+.flight-results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flight-results-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.api-source {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+/* الرسم البياني */
+.price-graph-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .App.ltr .main-content,
+  .App.rtl .main-content {
+    flex-direction: column;
+  }
+  
+  .App.ltr .filters-section,
+  .App.rtl .filters-section {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .feature {
+    flex: none;
+  }
+}

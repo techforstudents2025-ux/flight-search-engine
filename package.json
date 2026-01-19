@@ -1,0 +1,55 @@
+{
+  "name": "flight-search-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive Flight Search Engine with real-time price graph and advanced filtering",
+  "author": "ameenalsharafi2020-hub",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameenalsharafi2020-hub/flight-search-engine.git"
+  },
+  "keywords": [
+    "flight-search",
+    "react",
+    "recharts",
+    "multilingual",
+    "responsive",
+    "travel"
+  ],
+  "dependencies": {
+    "amadeus": "^11.0.0",
+    "axios": "^1.13.2",
+    "date-fns": "^2.30.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.10.2",
+    "recharts": "^2.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
