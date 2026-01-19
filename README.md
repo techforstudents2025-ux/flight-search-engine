@@ -108,7 +108,7 @@ flight-search-engine/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ameenalsharafi2020-hub/flight-search-engine.git
+   git clone https://github.com/techforstudents2025-ux/flight-search-engine.git
    cd flight-search-engine
 ```
 
@@ -234,3 +234,4 @@ Project Link: https://github.com/techforstudents2025-ux/flight-search-engine
 =======
 # flight-search-engine
 >>>>>>> 748fa77729f46d9e8e3b27390689ed54b5174abb
+
